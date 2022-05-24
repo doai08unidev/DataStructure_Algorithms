@@ -75,7 +75,7 @@ namespace SearchAlgorithm
             }
             else
             {
-                Console.WriteLine("Da tim thay " + x + " o vi tri " + (linearSearchResult +1));
+                Console.WriteLine("Da tim thay {0} o vi tri {1}",x,(linearSearchResult +1));
             }
 
             //BinarySearch (Recursion)
@@ -87,7 +87,7 @@ namespace SearchAlgorithm
             }
             else
             {
-                Console.WriteLine("Da tim thay " + x + " o vi tri " + (binarySearchRecursion + 1));
+                Console.WriteLine("Da tim thay {0} o vi tri {1}",x, (binarySearchRecursion + 1));
             }
 
             //BinarySearch (Iterator)
@@ -99,7 +99,7 @@ namespace SearchAlgorithm
             }
             else
             {
-                Console.WriteLine("Da tim thay " + x + " o vi tri " + (binarySearchIterator + 1));
+                Console.WriteLine("Da tim thay {0} o vi tri {1}",x,(binarySearchIterator + 1));
             }
         }
 
