@@ -2,7 +2,7 @@
 
 namespace SearchAlgorithm
 {
-    class SearchAlgorithmProgram
+    public class SearchAlgorithmProgram
     {
         public int LinearSearch(int[] Array, int x)
         {
@@ -60,7 +60,7 @@ namespace SearchAlgorithm
             return -1;
 
         }
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             SearchAlgorithmProgram searchProgram = new SearchAlgorithmProgram();
             int[] Array = { 1, 3, 5, 6, 7, 9 }; //array
@@ -101,6 +101,7 @@ namespace SearchAlgorithm
             {
                 Console.WriteLine("Da tim thay {0} o vi tri {1}",x,(binarySearchIterator + 1));
             }
+            Console.Read();
         }
 
     }
