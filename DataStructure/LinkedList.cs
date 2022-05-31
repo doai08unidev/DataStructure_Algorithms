@@ -1,6 +1,7 @@
-using System;
+
 public class LinkedList{
-	Node head;
+    Node head; //? operator - check nullable reference type c# 8.0
+    //Initialize a Node
     public class Node{
         public int data;
         public Node next;
@@ -8,23 +9,51 @@ public class LinkedList{
             data = d;
             next = null;
         }
-
     }
-    public void TraversalLinkedList(){
+    //Traversal emlements of LinkedList
+    public void Traversal(){
         Node n = head;
         while(n!=null){
             System.Console.Write(n.data + ";");
             n = n.next;
         }
     }
-    public static void Main(string[] args){
-        LinkedList linkedlist = new LinkedList();
-        linkedlist.head = new Node(1);
-        Node second = new Node(2);
-        Node third = new Node(3);
-        linkedlist.head.next = second;
-        second.next = third;
-        linkedlist.TraversalLinkedList();
+    //Add new Node to the fist of LinkedList
+    public void AddFirstNode(int newData){
+        Node newNode = new Node(newData);
+        newNode.next = head;
+        head = newNode;
     }
+    //Add new Node to the end of LinkedList
+    public void AddEndNode(int newData){
+        Node newNode = new Node(newData);
+		Node n = head;
+        if(head==null){
+            head = new Node(newData);
+        }
+		while(n!=null){
+			if(n.next == null){
+				n.next = newNode;
+                return;
+			}
+        	n = n.next;
+		}
+    }
+    public static void Main(string[] args){
+        LinkedList ll = new LinkedList();
+        // ll.head = new Node(1);
+        // Node second = new Node(2);
+        // ll.head.next = second;
+        // Node third = new Node(3);
+        // second.next = third;
+        // ll.AddFirstNode(5);
+        
+        // ll.AddEndNode(77);
+		// ll.AddEndNode(88);
+		ll.AddEndNode(99);
+        	ll.AddEndNode(995);
+        ll.Traversal();
+        
 
+    }
 }
