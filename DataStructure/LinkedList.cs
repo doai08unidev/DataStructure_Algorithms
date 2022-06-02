@@ -1,10 +1,11 @@
-
-public class LinkedList{
-    Node head; //? operator - check nullable reference type c# 8.0
+using System;
+namespace DataStructure{
+    public class LinkedList{
+    Node? head; //? operator - check nullable reference type c# 8.0
     //Initialize a Node
     public class Node{
         public int data;
-        public Node next;
+        public Node? next;
         public Node(int d){
             data = d;
             next = null;
@@ -56,4 +57,5 @@ public class LinkedList{
         
 
     }
+}
 }
