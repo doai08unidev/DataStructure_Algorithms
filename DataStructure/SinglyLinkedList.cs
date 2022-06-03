@@ -1,6 +1,6 @@
 using System;
 namespace DataStructure{
-    public class LinkedList{
+    public class SinglyLinkedList{
     Node? head; //? operator - check nullable reference type c# 8.0
     //Initialize a Node
     public class Node{
@@ -41,7 +41,7 @@ namespace DataStructure{
 		}
     }
     public static void Main(string[] args){
-        LinkedList ll = new LinkedList();
+        SinglyLinkedList ll = new SinglyLinkedList();
         // ll.head = new Node(1);
         // Node second = new Node(2);
         // ll.head.next = second;
@@ -52,7 +52,7 @@ namespace DataStructure{
         // ll.AddEndNode(77);
 		// ll.AddEndNode(88);
 		ll.AddEndNode(99);
-        	ll.AddEndNode(995);
+        ll.AddEndNode(995);
         ll.Traversal();
         
 
