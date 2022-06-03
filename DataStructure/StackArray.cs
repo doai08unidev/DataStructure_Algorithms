@@ -1,10 +1,10 @@
- using System;
+using System;
 namespace DataStructure{
-    class Stack{
+    class StackArray{
         private int[] ele;
         private int top;
         private int max;
-        public Stack(int size){
+        public StackArray(int size){
             ele = new int[size];
             top = -1;
             max = size;
@@ -15,7 +15,7 @@ namespace DataStructure{
                 return;
               
             }else{
-                ele[++top] = item;
+                ele[++top] = item;            
             }
         }
         public void printStack(){
@@ -28,7 +28,7 @@ namespace DataStructure{
             }
         }
         public static void Main(string[] args){
-            Stack stack = new Stack(5);
+            StackArray stack = new StackArray(5);
             stack.Push(10);
             stack.Push(20);
             stack.Push(30);
@@ -37,9 +37,8 @@ namespace DataStructure{
             stack.Push(60);
             stack.Push(70);
             stack.printStack();
+            Console.WriteLine(stack.top);
 
         }
     }
 }
-
- 
